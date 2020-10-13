@@ -1,0 +1,89 @@
+
+<!-- Amber Stone -->
+<!-- Lab 2 Part A -->
+<!-- Description: Create a page that utilizes CSS to format a table of the first ten U.S. presidents, their home states, -->
+<!-- and their years in office per specifications provided. -->
+<!-- Source: w3schools.com -->
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         #presidents {
+         font-family: "Palatino Linotype", Times New Roman, serif;
+         border-collapse: collapse;
+         width: 60%;
+         }
+         #presidents td, #presidents th {
+         border: 1px solid #000000;
+         padding: 5px;
+         }
+         #presidents tr:nth-child(odd){background-color: #ADD8E6;}
+         #presidents tr:hover {background-color: #ddd;}
+         #presidents th {
+         padding-top: 5px;
+         padding-bottom: 5px;
+         text-align: left;
+         background-color: #0000ff;
+         }
+      </style>
+   </head>
+   <body>
+      <table id="presidents">
+         <tr>
+            <th>Name</th>
+            <th>Home State</th>
+            <th>Years in Office</th>
+         </tr>
+         <tr>
+            <td>George Washington</td>
+            <td>Virginia</td>
+            <td>1789-1797</td>
+         </tr>
+         <tr>
+            <td>John Adams</td>
+            <td>Massachusettes</td>
+            <td>1797-1801</td>
+         </tr>
+         <tr>
+            <td>Thomas Jefferson</td>
+            <td>Virginia</td>
+            <td>1801-1809</td>
+         </tr>
+         <tr>
+            <td>James Madison</td>
+            <td>Virginia</td>
+            <td>1809-1817</td>
+         </tr>
+         <tr>
+            <td>James Monroe</td>
+            <td>Virginia</td>
+            <td>1817-1825</td>
+         </tr>
+         <tr>
+            <td>John Quincy Adams</td>
+            <td>Massachusettes</td>
+            <td>1825-1829</td>
+         </tr>
+         <tr>
+            <td>Andrew Jackson</td>
+            <td>South Carolina</td>
+            <td>1829-1832</td>
+         </tr>
+         <tr>
+            <td>Martin Van Buren</td>
+            <td>New York</td>
+            <td>1837-1841</td>
+         </tr>
+         <tr>
+            <td>William Henry Harrison</td>
+            <td>Virginia</td>
+            <td>1841</td>
+         </tr>
+         <tr>
+            <td>John Tyler</td>
+            <td>Virginia</td>
+            <td>1841-1845</td>
+         </tr>
+      </table>
+   </body>
+</html>
