@@ -1,0 +1,136 @@
+
+<!-- Amber Stone -->
+<!-- Lab 4 Part A -->
+<!-- Description:  Create an opening page (front page) for a website of a wildlife sanctuary for Canada geese using Bootstrap.  -->
+<!-- Sources:  -->
+<!-- Starter Template: https://getbootstrap.com/docs/4.5/examples/starter-template/ -->
+<!-- Content Template: https://startbootstrap.com/themes/one-page-wonder/ -->
+<!-- Visitor Schedule template: https://getbootstrap.com/docs/4.1/content/tables/ -->
+<!-- Geese Pictures: Marley Anthony https://unsplash.com/photos/Ty1XcALAaWU -->
+<!-- Josiah Weiss https://unsplash.com/photos/y2CmtBGKlAs -->
+<!-- Delaney Van https://unsplash.com/photos/rbyLWEAjl0M -->
+<!-- Gary Bendig https://unsplash.com/photos/7ne1ifXhI_Y -->
+<!-- Raphael Rychetsky https://unsplash.com/photos/f8Xv_KfROpo -->
+<!-- Additional Code: https://github.com/BestKhoality/Album-Template---Bootstrap-4 -->
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+      <link href="lab4a.css" rel="stylesheet">
+      <title>Canada Goose Sanctuary</title>
+   </head>
+   <body>
+      <!-- Create a navigation bar -->
+      <nav class="navbar navbar-dark bg-dark">
+         <span class="navbar-brand mb-0 h1"> 
+         Canada Goose Sactuary ⋅ 3311 Full Circle Way ⋅ Waterloo, Ontario N2H 6B5</span>
+      </nav>
+      <div class="jumbotron jumbotron-fluid">
+         <section class="jumbotron text-center">
+         <div class="container-transparent">
+            <h2 class="jumbotron-header">Welcome to Our Site!</h2>
+            <h5 class="jumbotron-header">If you would like to donate to the Canada Goose Fund, please visit www.cgcf.org</h5>
+         </div>
+      </div>
+      <!-- Create Card Display Area -->
+      <div class="album py-5 bg-light">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                     <img class="card-img-top" style="height:225px; width:100%; display:block;" src="Geese1.jpg" data-holder-rendered="true">
+                     <div class="card-body">
+                        <p class="card-text"><b>Beautiful Grounds:</b> Canada Geese Sanctuary is a 170-acre paradise for our feathery friends. </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                     <img class="card-img-top" style="height:225px; width:100%; display:block;" src="Geese2.jpg" data-holder-rendered="true">
+                     <div class="card-body">
+                        <p class="card-text"><b>Rescue and Rehabilitation:</b> Here at CGS, we are able to aid in keeping the Canada Geese population growing and thriving!</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="card mb-4 box-shadow">
+                     <img class="card-img-top" style="height:225px; width:100%; display:block;" src="Geese3.jpg" data-holder-rendered="true">
+                     <div class="card-body">
+                        <p class="card-text"><b>Open to the Public:</b> Please join us for a guided tour around the property to view and learn so much more about Canada Geese and our facilities! See our visitor schedule below!</p>
+                        <div class="d-flex justify-content-between align-items-center"> 
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Create Visitor Schedule Table --> 
+      <table class="table table-hover table-dark">
+         <thead>
+            <tr>
+               <th scope="col">Month</th>
+               <th scope="col">Days</th>
+               <th scope="col">Hours</th>
+               <th scope="col">Gift Shop Hours</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th scope="row">April</th>
+               <td>Tues-Sat</td>
+               <td>8:30am - 4:30pm</td>
+               <td>8:30am - 3:30pm</td>
+            </tr>
+            <tr>
+               <th scope="row">May</th>
+               <td>Mon-Sat</td>
+               <td>8:30am - 4:30pm</td>
+               <td>8:30am - 4:30pm</td>
+            </tr>
+            <tr>
+               <th scope="row">June</th>
+               <td>Mon-Sat</td>
+               <td>8:30am - 5:30pm</td>
+               <td>8:30am - 5:30pm</td>
+            </tr>
+            <tr>
+               <th scope="row">July</th>
+               <td>Mon-Sat</td>
+               <td>8:30am - 4:30pm</td>
+               <td>8:30am - 4:30pm</td>
+            </tr>
+            <tr>
+               <th scope="row">August</th>
+               <td>Mon-Sat</td>
+               <td>8:30am - 4:30pm</td>
+               <td>8:30am - 3:30pm</td>
+            <tr>
+               <th scope="row">September</th>
+               <td>Mon-Sat</td>
+               <td>8:30am - 3:30pm</td>
+               <td>8:30am - 3:30pm</td>
+            </tr>
+            <tr>
+               <th scope="row">Closed:</th>
+               <td> 
+               <td colspan="2">Memorial Day & Independence Day</td>
+      </table>
+      <!-- Create Footer -->
+      <footer class="footer">
+         <div class="container">
+            <span class="text-muted">Amber Holcomb-Stone</span>
+         </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+   </body>
+</html>
