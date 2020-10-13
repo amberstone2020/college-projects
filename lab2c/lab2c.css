@@ -1,0 +1,71 @@
+#title {
+  position: center;
+  background-color: #34000D;
+  color: #C4A747;
+  font-size: 40px;
+  font-family: 'Helvetica', 'Times New Roman', sans serif;
+  width: 100%;
+  height: 1.75em;
+  padding-top: .5em;
+  margin 0 auto;
+  margin-top:0;
+}
+
+#subtitle {
+  text-align: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+body {
+  background-color: #636263;
+  color: #C4A747;
+  font-size: 22px;
+  background-image: url("stringedinstrument.jpg");
+  background-size: 108%;
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  background-position:0 0em;
+ 
+}
+table, th, td {
+  border: 1px #C4A747;
+  margin-left: 3em;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+#tourdates {
+  font-family: "Palatino Linotype", Times New Roman, serif;
+  border-collapse: collapse;
+  width: 50em;
+  height:20em;
+
+}
+
+#tourdates td, #tourdates td {
+  border: 2px solid #C4A747;
+  padding: 5px;
+}
+
+#tourdates tr:hover {background-color: #ddd;}
+
+#tourdates th {
+  padding-bottom: 5px;
+  text-align: center;
+  background:#34000D;
+  opacity:1.0;
+}
+footer {
+  background-color: #34000D;
+  padding: 1em;
+  color: #C4A747;
+  text-align: center;
+}
