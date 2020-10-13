@@ -1,0 +1,131 @@
+<!-- Stylesheet -->title {
+	text-align: center;
+}
+
+body {
+	background-color: #e6e7e8;
+	text-align: center;
+	font-family: 'Helvetica', Helvetica, sans-serif;
+	min-width: 320px;
+	padding-bottom: 20px;
+	outline: 2px solid #a3230a;
+}
+
+header {
+	font-size: 2em;
+	font-weight: bold;
+	margin: 20px;
+}
+
+#form-outer {
+	background-color: #FFFFFF;
+	margin: 0 auto;
+	border-radius: 8px;
+	width: 60%;
+	max-width: 900px;
+	padding: 60px;
+	padding-top: 20px;
+}
+
+.logo {
+	width: 350px;
+	height: 200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.labels {
+	display: inline-block;
+	text-align: left;
+	width: 25%;
+	padding: 10px;
+	vertical-align: top;
+	margin-top: 10px;
+}
+
+.rightTab {
+	display: inline-block;
+	text-align: left;
+	width: 65%;
+	vertical-align: middle;
+}
+
+.input-field {
+	height: 20px;
+	width: 280px;
+	padding: 5px;
+	margin: 10px;
+	border: 1px solid #335CC7;
+	border-radius: 2px;
+}
+
+.userRatings,
+input[type="checkbox"] {
+	float: left;
+	margin-right: 5px;
+}
+
+.rating,
+input[type="checkbox"] {
+	float: left;
+	margin-right: 5px;
+}
+
+#submit {
+	background-color: #e6e7e8;
+	border-radius: 4px;
+	color: #335CC7;
+	font-size: 1.5em;
+	height: 40px;
+	width: 96px;
+	margin: 50px;
+	border: 1px solid #335CC7;
+}
+
+.dropdown {
+	height: 35px;
+	width: 140px;
+	padding: 5px;
+	margin: 10px;
+	margin-top: 15px;
+	border: 1px solid #335CC7;
+	border-radius: 2px;
+}
+
+.radio,
+.checkbox {
+	position: relative;
+	left: -43px;
+	margin-left: 10px;
+	display: block;
+	padding-bottom: 10px;
+}
+
+@media screen and (max-width: 833px) {
+	.input-field {
+		width: 80%;
+	}
+	select {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.labels {
+		width: 100%;
+		text-align: left;
+	}
+	.rightTab {
+		width: 80%;
+		float: left;
+	}
+	.input-field {
+		width: 100%;
+	}
+	select {
+		width: 100%;
+	}
+}
+
+
