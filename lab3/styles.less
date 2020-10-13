@@ -1,0 +1,98 @@
+// Variables 
+@color-text: #c4a747; 
+@color-base: #34000d; 
+@width: 1px;
+@style: dotted;
+
+//Color Calculation
+@color-hover: multiply(#ffffff, #999999);
+
+//Color Function
+@dark-color: darken(@color-base, 3%);
+
+//Variable Calculation
+@more-height: 1 + .75em;
+
+//Parametric Mixin
+.border-plus(@width; @style) {
+   border: @width @style;
+}
+
+//Non-Parametric Mixins
+.border{
+  border: solid 1px @color-text;
+}
+.align{
+  text-align: center;
+}
+
+#title {
+  .border();
+  .border-plus(.1em; double);
+	background-color: @color-base;
+	color: @color-text;
+	font-family: 'Helvetica', 'Times New Roman', sans serif;
+	font-size: 40px;
+	height: @more-height;
+	padding-top: .5em;
+	position: center;
+	width: 100%;
+}
+#subtitle {
+	padding-bottom: 2em;
+	padding-top: 2em;
+	text-align: center;
+}
+body {
+	background-blend-mode: multiply;
+	background-color: #636263;
+	background-image: url("stringedinstrument.jpg");
+	background-position:0 0em;
+	background-size: 108%;
+	color: @color-text;
+	display: flex;
+	flex-direction: column;
+	font-size: 22px;
+}
+table {
+	.border();
+	margin-left: 3em;
+}
+th {
+	.border();
+	margin-left: 3em;
+}
+td {
+	.border();
+	margin-left: 3em;
+}
+h1 {
+	.align();
+}
+h3 {
+	.align();
+}
+#tourdates {
+	border-collapse: collapse;
+	font-family: "Palatino Linotype", Times New Roman, serif;
+	height:20em;
+	width: 50em;
+	tr {
+		&:hover {
+			background:@color-hover;
+		}
+	}
+	th {
+		background:@color-base;
+		opacity:1.0;
+		padding-bottom: 5px;
+		.align();
+	}
+}
+footer {
+  .border-plus(.2em, @style);
+	background-color: @dark-color;
+	color: @color-text;
+	padding: 1em;
+	.align();
+}
