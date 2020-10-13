@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<!-- Amber Stone -->
+<!-- Lab 4 Part B -->
+<!-- Description: Use Bootstrap to create a simple main page for the dealership per specs provided. -->
+<!-- Template Adapted From: https://github.com/josdea/citc-2375/tree/master/lab4 -->
+<!-- Picture and Vehicle Information Source: https://www.nissanusa.com/ -->
+<!-- Font Style: https://fonts.google.com/specimen/Libre+Baskerville?sidebar.open=true&selection.family=Libre+Baskerville -->
+<html lang="en">
+
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous">
+   <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+      crossorigin="anonymous"> -->
+   <title>Lewis Motors</title>
+   <style>
+      body {
+      font-family: 'Libre Baskerville', serif;
+      background-image: radial-gradient(white, grey);
+      }
+      form {
+      background-color: white;
+      padding: 1em;
+      font-family: 'Libre Baskerville', serif;
+      line-height: 1.7em;
+      }
+      h1 {
+      color: #000080;
+      }
+      .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      }
+      form legend {
+      font-size: 2em;
+      }
+      button {
+      padding: 12px;
+      }
+      input,
+      button {
+      cursor: pointer;
+      }
+      .form-group {
+      margin-bottom: 1em;
+      margin-top: 2em;
+      }
+      .container {
+      background-color: white;
+      margin-bottom: 2em;
+      padding-top: 4px;
+      }
+   </style>
+</head>
+<body>
+   <img class="mx-auto d-block" src="Lewis-Automotive-LOGO.png" alt="Lewis Motors Logo">
+   <div class="container">
+   <br>
+   <div class="row">
+      <a class="col-sm-3" href="lab2B.html">Take Online Survey</a>
+      <a class="col-sm-3" href="#contact">Contact Online Sales</a>
+   </div>
+   <div class="album py-0 bg-white">
+   <br>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+               <img class="card-img-top" style="height:225px; width:100%; display:block;" src="2020Altima.png" data-holder-rendered="true">
+               <div class="card-body">
+                  <p class="card-text">ALTIMA COVERS EVERY ANGLE
+                     Blind spot warning gives you a warning about cars otherwise left unseen. 
+                     STOPPING POWER
+                     Automatic Emergency Braking w/ Pedestrian Detection helps you to stop when it detects a car or person too close in front of your vehicle. 
+                     CRUISE WITH ALTIMA
+                     Intelligent Cruise Control (ICC) with Full Speed Range and Hold detects the flow of traffic and intuitively keeps a pre-set distance from the car ahead.
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                     <b>$32,888 </b>  
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+               <img class="card-img-top" style="height:225px; width:100%; display:block;" src="2020 370Z.png" data-holder-rendered="true">
+               <div class="card-body">
+                  <p class="card-text">
+                     BRAKING? IT'S HANDLED.
+                     With an enthusiast’s wish list of high-performance components, the Nissan 370Z turns braking and handling into pure performance art.
+                     CHOOSE YOUR TRANSMISSION
+                     Choose between the 370Z's 6-speed manual transmission for maximum control, or the 7-speed automatic transmission for improved efficiency.
+                     RED-HOT HORSEPOWER
+                     Experience horsepower of up to 350 with the 370Z's V6 NISMO® Engine.
+                     370Z Engines
+                     Legendary VQ, V6 engines
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center">
+                     <b>$52,888</b>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+               <img class="card-img-top" style="height:225px; width:100%; display:block;" src="2020Titan.png" data-holder-rendered="true">
+               <div class="card-body">
+                  <p class="card-text">ONLY PICKUP WITH 400 HP STANDARD 
+                     The 400 horsepower Nissan Endurance® V8 engine is part of a performance package that eclipses standard equipment from Ford, Chevy, Ram and Toyota.
+                     LARGEST STANDARD SCREEN IN ITS CLASS 
+                     Squint no more, with the TITAN’s clean and crisp 8” screen that comes with standard Apple CarPlay®. 
+                     STANDARD SAFETY SHIELD® 360 
+                     This suite of 6 advanced safety features from Nissan Intelligent Mobility includes class-exclusive standard Rear Automatic Braking and class-exclusive Intelligent Forward Collision Warning and class-exclusive standard Rear Cross Traffic Alert. 
+                  </p>
+                  <div class="d-flex justify-content-between align-items-center"> 
+                     <b>$41,888</b>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <hr>
+      <h2 id="contact">Contact Us</h2>
+      <address>
+         Phone: 304-255-4554 <br> Email: <a href="mailto:someone@example.com?Subject=Hello%20again" target="_top">lewismotors.com</a>
+         <br> 304 Lewis Way Beckley, WV 27089 </br>
+      </address>
+   </div>
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+      crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"></script>
+</body>
+</html>
