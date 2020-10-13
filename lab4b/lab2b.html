@@ -1,0 +1,157 @@
+<!-- Amber Holcomb-Stone -->
+<!-- Lab 2 Part B -->
+<!-- Description: Assignment to create a feedback survey for a car dealership using only HTML. -->
+<!-- Sources: W3 schools and code adapted from survey assignment from freecodecamp.com. My original assignment: https://codepen.io/Amber_Stone/details/QzaRBV -->
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Satisfaction Survey</title>
+      <link rel="stylesheet" type="text/css" href="lab2b.css">
+      <img src="Lewis-Automotive-LOGO.png" alt="Lewis Automotive Logo" class="logo";>
+   </head>
+   <h1 id="title">Lewis Motors Customer Satisfaction Survey</h1>
+   <div id="form-outer">
+      <p id="description">
+         Please let us know about your recent experience with us! 
+      </p>
+      <div class="rowTab">
+         <div class="labels">
+            <label id="name-label" for="name">* Name: </label>
+         </div>
+         <div class="rightTab">
+            <input autofocus type="text" name="name" id="name" class="input-field" placeholder="Enter your Name" required>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label id="email-label" for="email">* Email: </label>
+         </div>
+         <div class="rightTab">
+            <input type="email" name="email" id="email" class="input-field" required placeholder="Enter your Email" required>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label for="userRating">1. Were you greeted by a sales associate within the first 5 minutes of entering our lot?</label>
+         </div>
+         <div class="rightTab">
+            <ul style="list-style: none;">
+               <li class="radio"><label><input name="radio-buttons" value="1"  type="radio" class="userRatings" >Definitely</label></li>
+               <li class="radio"><label><input name="radio-buttons" value="2"  type="radio" class="userRatings" >Almost certain</label></li>
+               <li class="radio"><label><input name="radio-buttons" value="3"  type="radio" class="userRatings" >Not sure</label></li>
+               <li class="radio"><label><input name="radio-buttons" value="4"  type="radio" class="userRatings" >No</label></li>
+            </ul>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label for="introduction">2. Did our sales associate introduce themselves immediately? </label>
+         </div>
+         <div class="rightTab">
+            <select id="dropdown" name="introduction" class="dropdown">
+               <option disabled selected value>Select an option</option>
+               <option value="Yes">Yes</option>
+               <option value="Mostly">Almost certain</option>
+               <option value="Not sure">Not sure</option>
+               <option value="No">No</option>
+            </select>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label for="name-tag">3. Did our sales associate have his/her name tag clearly visible? </label>
+         </div>
+         <div class="rightTab">
+            <select id="dropdown" name="nametag" class="dropdown">
+               <option disabled selected value>Select an option</option>
+               <option value="Yes">Yes</option>
+               <option value="Mostly">Almost certain</option>
+               <option value="Not sure">Not sure</option>
+               <option value="No">No</option>
+            </select>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label id="number-label" for="rating">4. Rate your experience with your salesperson, with 1 being least satisfied and 10 being most satisfied: </label>
+         </div>
+         <div class="rightTab">
+            <input type="number" name="number" id="number" min="1" max="10" style="height:20px;resize:vertical;width:30px"
+               class="input-field" placeholder="#">
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label for="test-drive">5. Did you test drive a vehicle with us during your visit? </label>
+         </div>
+         <div class="rightTab">
+            <ul id="improvements" style="list-style: none;">
+            <li class="checkbox"><label><input name="testdrive" value="1" type="checkbox" class="userRatings">Yes</label></li>
+            <li class="checkbox"><input name="testdrive" value="2" type="checkbox" class="userRatings">No</li>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label for="comments">6. Did we have the right vehicle for you in our inventory or make arrangements for a dealer trade on your behalf? Please explain.</label>
+         </div>
+         <div class="rightTab">
+            <textarea id="comments" class="input-field" name="comment" placeholder="Enter your comment here..."></textarea>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label for="condition-of">7. What was the condition of your vehicle? </label>
+         </div>
+         <div class="rightTab">
+            <select id="dropdown" name="condition" class="dropdown">
+               <option disabled selected value>Select an option</option>
+               <option value="New">New</option>
+               <option value="Pre-Owned">Pre-Owned</option>
+               <option value="Certified">Certified Pre-Owned</option>
+               <option value="None">I did not purchase a vehicle</option>
+            </select>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label for="test-drive">8. Did our service department provide a follow-up call with you a week after your purchase to schedule your first oil change and address concerns? </label>
+         </div>
+         <div class="rightTab">
+            <ul id="improvements" style="list-style: none;">
+            <li class="checkbox"><label><input name="testdrive" value="1" type="checkbox" class="userRatings">Yes</label></li>
+            <li class="checkbox"><input name="testdrive" value="2" type="checkbox" class="userRatings">No</li>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label for="preferences">9. Areas that chould be improved upon in the future<br>(Check all that apply): </label>
+         </div>
+         <div class="rightTab">
+            <ul id="improvements" style="list-style: none;">
+            <li class="checkbox"><label><input name="improve" value="1" type="checkbox" class="userRatings">Service</label></li>
+            <li class="checkbox"><input name="improve" value="2" type="checkbox" class="userRatings">Location</li>
+            <li class="checkbox"><label><input name="improve" value="3" type="checkbox" class="userRatings">Wait times</label></li>
+            <li class="checkbox"><label><input name="improve" value="4" type="checkbox" class="userRatings">Vehicle selection</label></li>
+            <li class="checkbox"><label><input name="improve" value="5" type="checkbox" class="userRatings">Comfort of lobby area</label></li>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label for="comments">10. Additional comments or suggestions:</label>
+         </div>
+         <div class="rightTab">
+            <textarea id="comments" class="input-field" name="comment" placeholder="Enter your comment here..."></textarea>
+         </div>
+      </div>
+      <div class="rowTab">
+         <div class="labels">
+            <label id="number-label" for="rating">11. Please rate your overall experience with Lewis Motors, with 1 being least satisfied and 10 being most satisfied: </label>
+         </div>
+         <div class="rightTab">
+            <input type="number" name="number" id="number" min="1" max="10" style="height:20px;resize:vertical;width:30px"
+               class="input-field" placeholder="#">
+         </div>
+      </div>
+      <button id="submit" type="submit">Submit</button>
+      </form>
+   </div>
