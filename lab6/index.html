@@ -1,0 +1,190 @@
+<!-- Amber Stone -->
+<!-- Lab 6 -->
+<!-- Puzzle Using jquery -->
+<!-- Code Along With and Code Adapted/Modified from: https://www.udemy.com/course/jquery-ui-practical-build-jquery-ui-projects/ -->
+<!-- Puzzle Image - Jon Tyson: https://unsplash.com/photos/EJzxF5uwJ-o -->
+
+<html>
+   <head>
+      <title>Puzzle "Peace"</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/black-tie/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <style>
+         #container
+         {
+         width:850px;
+         border:2px solid black;
+         background-color: #E8E8E8;
+         margin:10px auto;
+         padding:10px;
+         }
+         #pieceContainer
+         {
+         width:408px;
+         height:408px;
+         border:1px solid black;
+         float:left;
+         text-align: center;
+         font-size: 30px;
+         line-height: 408px;
+         position:relative;
+         }
+         #puzzleContainer
+         {
+         width:408px;
+         height:408px;
+         border:1px solid black;
+         float:right;
+         }
+         ul
+         {
+         list-style-type: none;
+         text-align: center;
+         }
+         ul button
+         {
+         width:100px;
+         border:1px solid black;
+         font-size: 20px;
+         border-radius: 5px;
+         padding:5px;
+         margin-top:10px;
+         }
+         #btnReset
+         {
+         display:none;
+         }
+         .piece
+         {
+         width:100px;
+         height:100px;
+         border:1px solid black;
+         float:left;
+         background-image:url(peace.jpg);
+         background-repeat: no-repeat;
+         }
+         #instructions
+	 {text-align: center;
+	 font-size: 18px;
+	 font-weight: bold;
+	 color: black;	
+	 }
+      </style>
+      <script>
+         $(document).ready(function(){
+             var pieces = createPieces(true);
+             $("#puzzleContainer").html(pieces);
+             $("#btnStart").click(function(){
+                 var pieces = $("#puzzleContainer div");
+                 pieces.each(function(){
+                     var leftPosition = Math.floor(Math.random()*290) + "px";
+                     var topPosition = Math.floor(Math.random()*290) + "px";
+                     $(this).addClass("draggablePiece")
+                         .css({
+                         position:"absolute",
+                         left:leftPosition,
+                         top:topPosition
+                     })
+                     $("#pieceContainer").append($(this));
+                 });
+                 var emptyString = createPieces(false);
+                 $("#puzzleContainer").html(emptyString);
+                 $(this).hide();
+                 $("#btnReset").show()
+                 implementLogic()
+             });
+             $("#btnReset").click(function(){
+                 var newPieces = createPieces(true);
+                 $("#puzzleContainer").html(newPieces);
+                 $(this).hide();
+                 $("#btnStart").show();
+                 $("#pieceContainer").empty();
+             });
+             function createPieces(withImage)
+             {
+                 var rows = 4, columns = 4;
+                 var pieces = "";
+                 for(var i=0,top=0,order=0;i<rows;i++,top-=100)
+                 {
+                     for(var j=0,left=0;j<columns;j++,left-=100,order++)
+                     {
+                         if(withImage)
+                         {
+                             pieces += "<div style='background-position:" + left + "px " + top + "px;' class='piece' data-order=" + order + "></div>";
+                         }
+                         else
+                         {
+                             pieces += "<div style='background-image:none;' class='piece droppableSpace'></div>";
+                         }
+                     }
+                 }
+                 return pieces;
+             }
+             function checkIfPuzzleSolved()
+             {
+                 if($("#puzzleContainer .droppedPiece").length != 16)
+                 {
+                     return false;
+                 }
+                 for(var k=0;k<16;k++)
+                 {
+                     var item = $("#puzzleContainer .droppedPiece:eq(" + k + ")");
+                     var order = item.data("order");
+                     if(k != order)
+                     {
+                         $("#pieceContainer").text("You were so close! Try again.");
+                         return false;
+                     }                    
+                 }
+                 $("#pieceContainer").text("You Win! Thanks for playing!");
+                 return true;
+             }
+             function implementLogic()
+             {
+                 $(".draggablePiece").draggable({
+                     revert:"invalid",
+                     start:function(){
+                         if($(this).hasClass("droppedPiece"))
+                         {
+                             $(this).removeClass("droppedPiece");                            
+                             $(this).parent().removeClass("piecePresent");
+                         }
+                     }
+                 });
+                 $(".droppableSpace").droppable({
+                     hoverClass:"ui-state-highlight",
+                     accept:function(){
+                         return !$(this).hasClass("piecePresent")
+                     },
+                     drop:function(event,ui)
+                     {
+                         var draggableElement = ui.draggable;
+                         var droppedOn = $(this);
+                         droppedOn.addClass("piecePresent");
+                         $(draggableElement)
+                             .addClass("droppedPiece")
+                             .css({
+                                 top:0,
+                                 left:0,
+                                 position:"relative"
+                             }).appendTo(droppedOn);
+                         checkIfPuzzleSolved();
+                     }
+                 });
+             }
+         });
+      </script>
+   </head>
+   <body>
+      <div id="container">
+         <div id="pieceContainer"></div>
+         <div id="puzzleContainer"></div>
+         <ul id="buttons">
+            <li><button id="btnStart">Start</button></li>
+            <li><button id="btnReset">Reset</button></li>
+         </ul>
+       <div id="instructions"> Hit "Start" to mix up the puzzle pieces and "Reset" to view picture and start over. Good Luck! </div>
+      </div>
+   </body>
+</html>
