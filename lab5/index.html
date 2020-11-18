@@ -1,0 +1,383 @@
+
+<!-- Amber Stone -->
+<!-- Lab 5 -->
+<!-- Description: Continuation of car dealership. -->
+<!-- Sources: W3 schools and code adapted from: https://github.com/josdea/citc-2375/tree/master/lab5-->
+<!DOCTYPE html>
+<html>
+   <head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <!-- <meta http-equiv="refresh" content="5"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+<!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <title>Lewis Motors Customer Satisfaction Survey</title>
+
+<style>
+    body {
+	background-color: #e6e7e8;
+	font-family: "Helvetica", Helvetica, sans-serif;
+	min-width: 320px;
+	padding-bottom: 23px;
+        border: 2px solid #a3230a;
+    }
+    form {
+      background-color: white;
+      padding: 1em;
+      font-family: "Helvetica", sans-serif;
+      line-height: 1.7em;
+      border: 2px solid #a3230a;
+    }
+
+    .logo {
+	width: 350px;
+	height: 200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+     }
+
+    h1 {
+      color: black;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    form legend {
+      font-size: 2em;
+    }
+
+
+    #testdrivecount {
+      padding: 8px 4px;
+      cursor: text;
+    }
+
+    button {
+      padding: 12px;
+    }
+
+    input,
+    button {
+      cursor: pointer;
+    }
+
+    .form-group {
+      margin-bottom: 1em;
+    }
+  </style>   
+</head>
+
+<body>
+
+  <div class="container">
+    <img class="mx-auto d-block" src="Lewis-Automotive-LOGO.png" alt="Lewis Motors logo">
+    <h1 class="text-center">Lewis Motors Customer Satisfaction Survey</h1>
+    <form name="survey" class="form-horizontal" onsubmit="return checkFields()" method="post">
+      <fieldset>
+
+<!-- Text input -->
+      <div id="name" class="form-group">
+            <label class="col-md-4 control-label" for="name">Name</label>
+          <div class="col-md-4">
+            <input id="name" name="name" type="text" placeholder="Enter Your Name" class="form-control input-md" required>
+         </div>
+      </div>
+
+<!-- Text input -->
+      <div id="email" class="form-group">
+            <label class="col-md-4 control-label" for="email">Email</label>
+          <div class="col-md-4">
+            <input id="email" name="email" type="text" placeholder="Enter Your Email Address" class="form-control input-md" required>
+         </div>
+      </div>
+
+<! Multiple Radios-->
+      <div class="form-group" id="greeted">
+            <label class="col-md-4 control-label" for="greeted">1. Were you greeted by a sales associate within the first 5 minutes of entering our lot?</label>
+         <div class="col-md-4">
+            <div class="radio">
+		<label for="greeted-0">
+               <input type="radio" name="greeted" id="greeted-0" value="definitely">Definitely
+               </label>
+	       <label for="greeted-1">
+               <input type="radio" name="greeted" id="greeted-1" value="almost certain">Almost Certain
+               </label>
+               <label for="greeted-2">
+               <input type="radio" name="greeted" id="greeted-2" value="not sure">Not Sure
+               </label>
+               <label for="greeted-3">
+               <input type="radio" name="greeted" id="greeted-3" value="no">No
+               </label>
+         </div>
+      </div>
+
+<! Multiple Radios-->
+      <div class="form-group" id="introduction">
+            <label class="col-md-4 control-label" for="introduction">2. Did our sales associate introduce themselves immediately? </label>
+         <div class="col-md-4">
+            <div class="radio">
+		<label for="introduction-0">
+               <input type="radio" name="introduction" id="introduction-0" value="definitely">Definitely
+               </label>
+	       <label for="greeted-1">
+               <input type="radio" name="introduction" id="introduction-1" value="almost certain">Almost Certain
+               </label>
+               <label for="greeted-2">
+               <input type="radio" name="introduction" id="introduction-2" value="not sure">Not Sure
+               </label>
+               <label for="greeted-3">
+               <input type="radio" name="introduction" id="introduction-3" value="no">No
+               </label>
+         </div>
+      </div>
+
+<! Multiple Radios-->
+      <div class="form-group" id="nametag">
+            <label class="col-md-4 control-label" for="nametag">3. Did our sales associate have his/her name tag clearly visible? </label>
+         <div class="col-md-4">
+            <div class="radio">
+		<label for="nametag-0">
+               <input type="radio" name="nametag" id="nametag-0" value="definitely">Definitely
+               </label>
+	       <label for="nametag-1">
+               <input type="radio" name="nametag" id="nametag-1" value="almost certain">Almost Certain
+               </label>
+               <label for="nametag-2">
+               <input type="radio" name="nametag" id="nametag-2" value="not sure">Not Sure
+               </label>
+               <label for="nametag-3">
+               <input type="radio" name="nametag" id="nametag-3" value="no">No
+               </label>
+         </div>
+      </div>
+
+<!-- Number Box -->
+      <div class="form-group">
+            <label class="col-md-4 control-label" for="testdrivecount">4. Rate your experience with your salesperson, with 1 being least satisfied and 10 being most satisfied: </label>
+         <div class="col-md-2">
+            <input id="salespersonrating" name="salespersonrating" type="number" step="1" max="10" min="0" value=0 placeholder="#" class="form-control input-md">
+         </div>
+      </div>
+
+<! Multiple Radios-->
+      <div class="form-group" id="testdrive">
+            <label class="col-md-4 control-label" for="testdrive">5. Did you test drive a vehicle with us during your visit? </label>
+         <div class="col-md-4">
+		<label class="radio-inline" for="testdrive-0">
+               <input type="radio" name="testdrive" id="testdrive-0" value="yes">Yes
+               </label>
+	       <label class="radio-inline" for="testdrive-1">
+               <input type="radio" name="testdrive" id="testdrive-1" value="no">No
+               </label>
+         </div>
+      </div>
+      
+<!--TextBox -->
+      <div id="rightvehicle" class="form-group">
+            <label class="col-md-4 control-label" for="comments">6. Did we have the right vehicle for you in our inventory or make arrangements for a dealer trade on your behalf? Please explain.</label>
+         <div class="col-md-4">
+            <input id="comments" name="rightvehicle" type="text" placeholder="Enter Comment Here..." class="form-control input-md">
+         </div>
+
+<! Multiple Radios-->
+      <div class="form-group" id="condition">
+            <label class="col-md-4 control-label" for="condition">7. What was the condition of your vehicle? </label>
+         <div class="col-md-4">
+		<label class="radio-inline" for="testdrive-0">
+               <input type="radio" name="condition" id="condition-0" value="new">New
+               </label>
+	       <label class="radio-inline" for="condition-1">
+               <input type="radio" name="condition" id="condition-1" value="used">Used
+               </label>
+               <label class="radio-inline" for="condition-2">
+               <input type="radio" name="condition" id="condition-2" value="none">I did not make a purchase
+               </label>
+         </div>
+      </div>
+      
+
+<! Multiple Radios-->
+      <div class="form-group" id="followup">
+            <label class="col-md-4 control-label" for="followup">8. Did our service department provide a follow-up call with you a week after your purchase to schedule your first oil change and address concerns? </label>
+         <div class="col-md-4">
+		<label class="radio-inline" for="followup-0">
+               <input type="radio" name="followup" id="followup-0" value="yes">Yes
+               </label>
+	       <label class="radio-inline" for="followup-1">
+               <input type="radio" name="followup" id="followup-1" value="no">No
+               </label>
+         </div>
+      </div>
+     
+<!--Radio Buttons-->
+
+        <div class="form-group" id="improvements">
+            <label class="col-md-4 control-label" for="improvements">9. Area that chould be most improved upon in the future: </label>
+         <div class="col-md-4">
+		<label class="radio-inline" for="improvements-0">
+               <input type="radio" name="improvements" id="condition-0" value="service">Service
+               </label>
+	       <label class="radio-inline" for="improvements-1">
+               <input type="radio" name="improvements" id="improvements-1" value="location">Location
+               </label>
+               <label class="radio-inline" for="improvements-2">
+               <input type="radio" name="improvements" id="improvements-2" value="waittimes">Wait Times
+               </label>
+               <label class="radio-inline" for="improvements-3">
+               <input type="radio" name="improvements" id="improvements-3" value="vehicleselection">Vehicle Selection
+               </label>
+               <label class="radio-inline" for="improvements-3">
+               <input type="radio" name="improvements" id="improvements-4" value="comfortoflobby">Comfort of Lobby Area
+               </label>
+         </div>
+      </div>
+
+<!--TextBox -->
+      <div id="comments" class="form-group">
+            <label class="col-md-4 control-label" for="comments">10. Additional comments or suggestions:</label>
+         <div class="col-md-4">
+            <input id="comments" name="comments" type="text" placeholder="Enter your comment here..." class="form-control input-md">
+         </div>
+
+<!-- NumberBox -->
+      <div class="form-group">
+       
+            <label class="col-md-4 control-label" for="rating">11. Please rate your overall experience with Lewis Motors, with 1 being least satisfied and 10 being most satisfied: </label>
+         <div class="col-md-2">
+            <input id="rateexperience" name="rateexperience" type="number" step="1" max="10" min="0" value=0 placeholder="#" class="form-control input-md">
+         </div>
+     </div>
+      
+<!-- Button (Double) -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="submit"></label>
+          <div class="col-md-8">
+            <button id="submit" type="submit" name="submit" value="Submit" class="btn">Submit</button>
+            <button id="reset" type="reset" name="reset" class="btn">Reset</button>
+          </div>
+        </div>
+      
+       </fieldset>
+      </form>
+   </div>
+
+ <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+
+
+  <script>
+
+    //Called on button push - returns false to prevent default form behavior
+    function checkFields() {
+      
+      var surveyvalid = true;
+      var kvpairs = [];
+      var form = document.forms["survey"];
+      for (var i = 0; i < form.elements.length; i++) {
+        var e = form.elements[i];
+        if (!kvpairs.includes(e.name)) {
+          kvpairs.push(encodeURIComponent(e.name));
+        }
+      }
+
+      kvpairs.forEach(function (element) {
+        if (element !== 'submit' && element !== 'reset' && element !== '') {
+          if (document.forms["survey"][element].value == "") {
+            surveyvalid = false;
+            document.getElementById(element).style.color = "red";
+          } else {
+            document.getElementById(element).style.color = "black";
+          }
+        }
+      });
+
+      if (!surveyvalid) {
+
+        document.getElementById("exampleModalLabel").innerHTML = "Missing Fields";
+        document.getElementById("modal-body").innerHTML = "You are missing some required fields.";
+        $('#exampleModal').modal();
+
+      } else {
+
+        document.getElementById("exampleModalLabel").innerHTML = "Form Results";
+        document.getElementById("modal-body").innerHTML = "Thank you, "
+          + document.forms["survey"].elements.name.value
+          + " for your feedback!"
+          + '<br>'
+          + 'Email: '
+          + document.forms["survey"].elements.email.value
+          + '<br>'
+          + 'Greeted on the lot: '
+          + document.forms["survey"].elements.greeted.value
+          + '<br>'
+          + 'Introduction: '
+          + document.forms["survey"].elements.introduction.value
+          + '<br>'
+          + 'Name Tag: '
+          + document.forms["survey"].elements.nametag.value
+          + '<br>'
+          + 'Salesperson Rating: '
+          + document.forms["survey"].elements.salespersonrating.value
+          + '<br>'
+          + 'Test Drive: '
+          + document.forms["survey"].elements.testdrive.value
+          + '<br>'
+          + 'Right Vehicle: '
+          + document.forms["survey"].elements.rightvehicle.value
+          + '<br>'
+          + 'Vehicle Condition: '
+          + document.forms["survey"].elements.condition.value
+          + '<br>'
+          + 'Follow Up: '
+          + document.forms["survey"].elements.followup.value;
+          + '<br>'
+          + 'Improvements: '
+          + document.forms["survey"].elements.improvements.value
+          + '<br>'
+          + 'Comments: '
+          + document.forms["survey"].elements.comments.value
+          + '<br>'
+          + 'Rate Experience: '
+          + document.forms["survey"].elements.rateexperience.value;
+        $('#exampleModal').modal();
+      }
+      return false;
+    }
+  </script>
+
+</body>
+
+</html>
