@@ -1,2 +1,2 @@
 # college-projects
-Various Assignments in Different Formats
+Various Assignments using HTML, CSS, JS, jQuery, Less
